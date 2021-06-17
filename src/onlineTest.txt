@@ -1,0 +1,87 @@
+write a code for component and pure component?
+hooks --> 
+import react,{useState} from 'react';
+const[state,setState] = useState(0);
+const App =()=>{
+return(
+<div>
+<button onClick={setState({state+1})}>{state}</button>
+<button onClick={setState({state-1})>sub-button</button>
+</div>
+)
+}
+
+pureComponents -->
+
+what and why JSX?
+hooks
+const[state,setstate]=useState({name:""})
+
+const handleChange=(e)=>{
+setstate(name:e.target.value)
+console.log(state);
+}
+
+<form onSubmit={handleChange}>
+<input
+type='text'
+placeholder='enter name'
+onChange={e => setState({e.target.value})
+id='name'
+/>
+<button type="submit">submit</button>
+</form>
+
+
+saving with form.jsx
+--------------------
+What is Composition?
+-------------------
+What is selector?
+-----------------
+Possibilities of multi depth component interactions (Redux components)
+-------------------
+What is prop drilling?
+
+parent 1
+	child 1
+  	child 1.1
+    child 1.2
+  child 2
+
+class ParentApp Component{
+state = {count:1}
+render(
+return(
+<div>
+<p>{state}</p>
+</div>
+);
+)
+}
+
+Child 1
+
+import App from ""
+
+function Appchild(){
+return(
+<div>
+<p>
+<ParentApp/>
+</p>
+<p>name</p>
+</div>
+);
+}
+--------------
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+
+this.setState({
+  counter: this.state.counter,
+});
+const counter = 1 ;
+const increment = 'hello world' ---->props maybe from another file
+this.props.increment + {state} 
